@@ -134,7 +134,7 @@ See `.dev.vars.example` for a documented template of all environment variables.
 
 ## Testing
 
-The test suite includes 38 E2E tests covering core workflows, input validation, provider quota states, queue management, and edge cases. See `docs/e2e-testing-guide.md` for the full reference.
+The test suite includes 41 E2E tests covering core workflows, input validation, provider quota states, queue management, and edge cases. See `docs/e2e-testing-guide.md` for the full reference.
 
 **Unit tests:**
 
