@@ -1,0 +1,79 @@
+{
+  "label": "1600 Pennsylvania Ave NW, Washington, DC 20500, USA",
+  "center": { "lat": 38.89768, "lng": -77.03653 },
+  "matches": ["1600 pennsylvania ave", "washington, dc 20500"],
+  "points": [
+    {
+      "key": "gwu-hospital",
+      "name": "The George Washington University Hospital",
+      "category": "hospitals",
+      "rawCategories": ["hospitals"],
+      "address": "900 23rd St NW, Washington, DC 20037",
+      "lat": 38.9019,
+      "lng": -77.0502,
+      "website": null,
+      "phone": null,
+      "sourceTags": { "mock": "true", "category": "hospitals" }
+    },
+    {
+      "key": "school-without-walls",
+      "name": "School Without Walls High School",
+      "category": "schools",
+      "rawCategories": ["schools"],
+      "address": "2130 G St NW, Washington, DC 20037",
+      "lat": 38.8974,
+      "lng": -77.0435,
+      "website": null,
+      "phone": null,
+      "sourceTags": { "mock": "true", "category": "schools" }
+    },
+    {
+      "key": "citycenter",
+      "name": "CityCenterDC",
+      "category": "malls",
+      "rawCategories": ["malls"],
+      "address": "825 10th St NW, Washington, DC 20001",
+      "lat": 38.9027,
+      "lng": -77.0257,
+      "website": null,
+      "phone": null,
+      "sourceTags": { "mock": "true", "category": "malls" }
+    },
+    {
+      "key": "old-ebbitt",
+      "name": "Old Ebbitt Grill",
+      "category": "restaurants",
+      "rawCategories": ["restaurants"],
+      "address": "675 15th St NW, Washington, DC 20005",
+      "lat": 38.897,
+      "lng": -77.0375,
+      "website": null,
+      "phone": null,
+      "sourceTags": { "mock": "true", "category": "restaurants" }
+    },
+    {
+      "key": "compass-coffee",
+      "name": "Compass Coffee",
+      "category": "coffee_shops",
+      "rawCategories": ["coffee_shops"],
+      "address": "1535 7th St NW, Washington, DC 20001",
+      "lat": 38.9012,
+      "lng": -77.0392,
+      "website": null,
+      "phone": null,
+      "sourceTags": { "mock": "true", "category": "coffee_shops" }
+    },
+    {
+      "key": "e-street",
+      "name": "E Street Cinema",
+      "category": "movie_theaters",
+      "rawCategories": ["movie_theaters"],
+      "address": "555 11th St NW, Washington, DC 20004",
+      "lat": 38.8961,
+      "lng": -77.0286,
+      "website": null,
+      "phone": null,
+      "sourceTags": { "mock": "true", "category": "movie_theaters" }
+    }
+  ]
+}

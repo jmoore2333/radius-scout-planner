@@ -1,0 +1,26 @@
+# ============================================================
+# Radius Scout — Local Development Environment Variables
+# ============================================================
+# Copy this file to .dev.vars and fill in your values:
+#   cp .dev.vars.example .dev.vars
+#
+# These are used by `wrangler dev` for local development.
+# For production, set secrets via `wrangler secret put <NAME>`.
+# ============================================================
+
+# Azure Maps API key
+# Get from: Azure Portal > Create resource > Azure Maps > Keys
+# Free tier (S0): 5,000 search transactions/month
+# https://learn.microsoft.com/en-us/azure/azure-maps/how-to-manage-authentication
+AZURE_MAPS_KEY=your_azure_maps_key_here
+
+# Mapbox public token
+# Get from: https://account.mapbox.com/access-tokens/
+# Must be a pk.* token (NOT sk.* secret token)
+# Required scopes: styles:read, fonts:read, styles:tiles
+# Free tier: 50,000 map loads/month
+MAPBOX_PUBLIC_TOKEN=pk.your_mapbox_public_token_here
+
+# Set to 1 to use mock fixtures instead of real API calls
+# Recommended for development and testing
+PROVIDER_MOCKS=1

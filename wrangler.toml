@@ -1,0 +1,46 @@
+name = "radius-scout"
+main = "edge/index.ts"
+compatibility_date = "2026-03-08"
+workers_dev = true
+upload_source_maps = true
+
+
+[observability]
+enabled = true
+head_sampling_rate = 1
+
+[observability.logs]
+invocation_logs = true
+
+[assets]
+directory = "./dist"
+binding = "ASSETS"
+not_found_handling = "single-page-application"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "radius-scout-db"
+database_id = "YOUR_DATABASE_ID"
+migrations_dir = "drizzle"
+
+[[r2_buckets]]
+binding = "MEDIA_BUCKET"
+bucket_name = "radius-scout-media"
+
+[[durable_objects.bindings]]
+name = "QUOTA_GATE"
+class_name = "ProviderQuotaGate"
+
+[[migrations]]
+tag = "v2"
+new_sqlite_classes = ["ProviderQuotaGate"]
+
+[vars]
+APP_NAME = "Radius Scout"
+APP_ENV = "production"
+APP_BASE_URL = "https://your-domain.example.com"
+AZURE_BILLING_CYCLE_DAY = "1"
+AZURE_MONTHLY_SEARCH_LIMIT = "5000"
+MAPBOX_BILLING_CYCLE_DAY = "1"
+MAPBOX_MONTHLY_MAP_LOAD_LIMIT = "50000"
+MAPBOX_STYLE_URL = "mapbox://styles/mapbox/satellite-streets-v12"

@@ -1,0 +1,79 @@
+{
+  "label": "Scranton, PA, USA",
+  "center": { "lat": 41.40897, "lng": -75.66241 },
+  "matches": ["scranton"],
+  "points": [
+    {
+      "key": "geisinger",
+      "name": "Geisinger Community Medical Center",
+      "category": "hospitals",
+      "rawCategories": ["hospitals"],
+      "address": "1800 Mulberry St, Scranton, PA 18510",
+      "lat": 41.3952,
+      "lng": -75.6407,
+      "website": null,
+      "phone": null,
+      "sourceTags": { "mock": "true", "category": "hospitals" }
+    },
+    {
+      "key": "scranton-high",
+      "name": "Scranton High School",
+      "category": "schools",
+      "rawCategories": ["schools"],
+      "address": "63 Munchak Way, Scranton, PA 18508",
+      "lat": 41.4217,
+      "lng": -75.6506,
+      "website": null,
+      "phone": null,
+      "sourceTags": { "mock": "true", "category": "schools" }
+    },
+    {
+      "key": "viewmont",
+      "name": "Viewmont Mall",
+      "category": "malls",
+      "rawCategories": ["malls"],
+      "address": "100 Viewmont Mall, Scranton, PA 18508",
+      "lat": 41.4703,
+      "lng": -75.6201,
+      "website": null,
+      "phone": null,
+      "sourceTags": { "mock": "true", "category": "malls" }
+    },
+    {
+      "key": "peculiar",
+      "name": "Peculiar Slurp Shop",
+      "category": "restaurants",
+      "rawCategories": ["restaurants"],
+      "address": "305 Penn Ave, Scranton, PA 18503",
+      "lat": 41.4094,
+      "lng": -75.6626,
+      "website": null,
+      "phone": null,
+      "sourceTags": { "mock": "true", "category": "restaurants" }
+    },
+    {
+      "key": "northern-light",
+      "name": "Northern Light Espresso Bar",
+      "category": "coffee_shops",
+      "rawCategories": ["coffee_shops"],
+      "address": "536 Spruce St, Scranton, PA 18503",
+      "lat": 41.4087,
+      "lng": -75.6622,
+      "website": null,
+      "phone": null,
+      "sourceTags": { "mock": "true", "category": "coffee_shops" }
+    },
+    {
+      "key": "circle-drive",
+      "name": "Circle Drive-In",
+      "category": "movie_theaters",
+      "rawCategories": ["movie_theaters"],
+      "address": "1911 Scranton Carbondale Hwy, Dickson City, PA 18508",
+      "lat": 41.4541,
+      "lng": -75.6042,
+      "website": null,
+      "phone": null,
+      "sourceTags": { "mock": "true", "category": "movie_theaters" }
+    }
+  ]
+}

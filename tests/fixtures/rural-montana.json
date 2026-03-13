@@ -1,0 +1,31 @@
+{
+  "label": "Dillon, MT, USA",
+  "center": { "lat": 45.2166, "lng": -112.6373 },
+  "matches": ["dillon"],
+  "points": [
+    {
+      "key": "barrett-hospital",
+      "name": "Barrett Hospital & HealthCare",
+      "category": "hospitals",
+      "rawCategories": ["hospitals"],
+      "address": "600 MT Hwy 91 S, Dillon, MT 59725",
+      "lat": 45.2155,
+      "lng": -112.6348,
+      "website": null,
+      "phone": null,
+      "sourceTags": { "mock": "true", "category": "hospitals" }
+    },
+    {
+      "key": "sweetwater-coffee",
+      "name": "Sweetwater Coffee",
+      "category": "restaurants",
+      "rawCategories": ["restaurants"],
+      "address": "26 S Montana St, Dillon, MT 59725",
+      "lat": 45.2162,
+      "lng": -112.6392,
+      "website": null,
+      "phone": null,
+      "sourceTags": { "mock": "true", "category": "restaurants" }
+    }
+  ]
+}

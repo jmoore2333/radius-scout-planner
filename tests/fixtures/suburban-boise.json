@@ -1,0 +1,115 @@
+{
+  "label": "Meridian, ID, USA",
+  "center": { "lat": 43.6121, "lng": -116.3915 },
+  "matches": ["meridian"],
+  "points": [
+    {
+      "key": "st-lukes-meridian",
+      "name": "St. Luke's Meridian Medical Center",
+      "category": "hospitals",
+      "rawCategories": ["hospitals"],
+      "address": "520 S Eagle Rd, Meridian, ID 83642",
+      "lat": 43.6063,
+      "lng": -116.3924,
+      "website": null,
+      "phone": null,
+      "sourceTags": { "mock": "true", "category": "hospitals" }
+    },
+    {
+      "key": "west-ada-medical",
+      "name": "West Ada Medical",
+      "category": "hospitals",
+      "rawCategories": ["hospitals"],
+      "address": "3301 E Louise Dr, Meridian, ID 83642",
+      "lat": 43.6189,
+      "lng": -116.4012,
+      "website": null,
+      "phone": null,
+      "sourceTags": { "mock": "true", "category": "hospitals" }
+    },
+    {
+      "key": "barbacoa-meridian",
+      "name": "Barbacoa",
+      "category": "restaurants",
+      "rawCategories": ["restaurants"],
+      "address": "276 E 2nd St, Meridian, ID 83642",
+      "lat": 43.6115,
+      "lng": -116.3978,
+      "website": null,
+      "phone": null,
+      "sourceTags": { "mock": "true", "category": "restaurants" }
+    },
+    {
+      "key": "flatbread-pizzeria",
+      "name": "Flatbread Neapolitan Pizzeria",
+      "category": "restaurants",
+      "rawCategories": ["restaurants"],
+      "address": "731 E Park Blvd, Meridian, ID 83642",
+      "lat": 43.6082,
+      "lng": -116.3901,
+      "website": null,
+      "phone": null,
+      "sourceTags": { "mock": "true", "category": "restaurants" }
+    },
+    {
+      "key": "dutch-bros-meridian",
+      "name": "Dutch Bros Coffee",
+      "category": "coffee_shops",
+      "rawCategories": ["coffee_shops"],
+      "address": "1560 E Fairview Ave, Meridian, ID 83642",
+      "lat": 43.6147,
+      "lng": -116.3952,
+      "website": null,
+      "phone": null,
+      "sourceTags": { "mock": "true", "category": "coffee_shops" }
+    },
+    {
+      "key": "village-starbucks",
+      "name": "The Village at Meridian Starbucks",
+      "category": "coffee_shops",
+      "rawCategories": ["coffee_shops"],
+      "address": "3597 E Longwing Ln, Meridian, ID 83642",
+      "lat": 43.6001,
+      "lng": -116.3928,
+      "website": null,
+      "phone": null,
+      "sourceTags": { "mock": "true", "category": "coffee_shops" }
+    },
+    {
+      "key": "village-at-meridian",
+      "name": "The Village at Meridian",
+      "category": "malls",
+      "rawCategories": ["malls"],
+      "address": "3580 E Longwing Ln, Meridian, ID 83642",
+      "lat": 43.5998,
+      "lng": -116.3931,
+      "website": null,
+      "phone": null,
+      "sourceTags": { "mock": "true", "category": "malls" }
+    },
+    {
+      "key": "meridian-high-school",
+      "name": "Meridian High School",
+      "category": "schools",
+      "rawCategories": ["schools"],
+      "address": "1900 W Pine Ave, Meridian, ID 83642",
+      "lat": 43.6134,
+      "lng": -116.3954,
+      "website": null,
+      "phone": null,
+      "sourceTags": { "mock": "true", "category": "schools" }
+    },
+    {
+      "key": "regal-village-cinema",
+      "name": "Regal Village Cinema",
+      "category": "movie_theaters",
+      "rawCategories": ["movie_theaters"],
+      "address": "3601 E Longwing Ln, Meridian, ID 83642",
+      "lat": 43.6005,
+      "lng": -116.3935,
+      "website": null,
+      "phone": null,
+      "sourceTags": { "mock": "true", "category": "movie_theaters" }
+    }
+  ]
+}

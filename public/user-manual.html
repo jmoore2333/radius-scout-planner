@@ -1,0 +1,482 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Radius Scout User Manual</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #08111d;
+        --panel: rgba(10, 19, 31, 0.88);
+        --panel-strong: rgba(14, 24, 38, 0.94);
+        --line: rgba(242, 184, 75, 0.18);
+        --line-strong: rgba(242, 184, 75, 0.42);
+        --ink: #f5f3eb;
+        --muted: #98a8bb;
+        --accent: #f2b84b;
+        --accent-cool: #63b8db;
+        --radius: 26px;
+        --shadow: 0 30px 90px rgba(0, 0, 0, 0.35);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "IBM Plex Mono", "SFMono-Regular", ui-monospace, monospace;
+        background:
+          radial-gradient(circle at top left, rgba(242, 184, 75, 0.16), transparent 28%),
+          radial-gradient(circle at top right, rgba(99, 184, 219, 0.12), transparent 26%),
+          linear-gradient(180deg, #071019 0%, #08111d 45%, #0b1623 100%);
+        color: var(--ink);
+      }
+
+      a {
+        color: inherit;
+      }
+
+      .page {
+        width: min(1240px, calc(100vw - 32px));
+        margin: 0 auto;
+        padding: 32px 0 56px;
+      }
+
+      .hero,
+      .panel,
+      .step,
+      .figure-card {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        backdrop-filter: blur(12px);
+      }
+
+      .hero {
+        padding: 28px;
+        margin-bottom: 20px;
+      }
+
+      .eyebrow {
+        margin: 0;
+        color: var(--muted);
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        font-size: 0.72rem;
+      }
+
+      h1,
+      h2,
+      h3 {
+        font-family: "Space Grotesk", "Avenir Next", sans-serif;
+        line-height: 0.98;
+        margin: 0;
+      }
+
+      h1 {
+        font-size: clamp(2.4rem, 5vw, 4.9rem);
+        max-width: 12ch;
+        margin: 12px 0 18px;
+      }
+
+      h2 {
+        font-size: clamp(1.5rem, 3vw, 2.3rem);
+        margin-bottom: 14px;
+      }
+
+      p,
+      li {
+        color: var(--muted);
+        line-height: 1.65;
+      }
+
+      .hero-grid,
+      .two-up,
+      .gallery {
+        display: grid;
+        gap: 18px;
+      }
+
+      .hero-grid,
+      .two-up {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .panel {
+        padding: 22px;
+      }
+
+      .panel strong,
+      .step strong,
+      figcaption strong {
+        color: var(--ink);
+      }
+
+      .badge-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 18px;
+      }
+
+      .badge {
+        padding: 10px 14px;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: rgba(255, 255, 255, 0.04);
+        color: var(--ink);
+        font-size: 0.82rem;
+      }
+
+      .section {
+        margin-top: 22px;
+      }
+
+      .step-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 14px;
+      }
+
+      .step {
+        padding: 18px;
+      }
+
+      .step .number {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+        margin-bottom: 12px;
+        border-radius: 999px;
+        background: linear-gradient(135deg, var(--accent), #d97b2a);
+        color: #12202d;
+        font-weight: 700;
+      }
+
+      .callout {
+        border-left: 4px solid var(--accent);
+        padding-left: 14px;
+        margin-top: 14px;
+      }
+
+      .figure-card {
+        overflow: hidden;
+      }
+
+      .figure-card img {
+        display: block;
+        width: 100%;
+        height: auto;
+        background: #04080f;
+      }
+
+      .figure-card img.broken {
+        display: none;
+      }
+
+      .figure-card .img-placeholder {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 180px;
+        background: #04080f;
+        color: var(--muted);
+        font-size: 0.82rem;
+        text-align: center;
+        padding: 24px;
+      }
+
+      .figure-copy {
+        padding: 16px 18px 18px;
+      }
+
+      .figure-copy p {
+        margin: 8px 0 0;
+      }
+
+      .checklist {
+        margin: 0;
+        padding-left: 18px;
+      }
+
+      .footer-nav {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        margin-top: 28px;
+      }
+
+      .footer-nav a {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 12px 16px;
+        text-decoration: none;
+        border-radius: 16px;
+        border: 1px solid var(--line-strong);
+        background: var(--panel-strong);
+      }
+
+      @media (max-width: 960px) {
+        .hero-grid,
+        .two-up,
+        .step-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .page {
+          width: min(100vw - 20px, 1240px);
+          padding: 18px 0 36px;
+        }
+
+        .hero,
+        .panel {
+          padding: 18px;
+        }
+
+        .footer-nav {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <section class="hero">
+        <p class="eyebrow">User Manual</p>
+        <h1>Radius Scout</h1>
+        <p>
+          Radius Scout is a radius-first scouting tool for discovering and managing points of interest around any address.
+          Start from a location, choose a radius, pull nearby POIs, build a reusable scouting board, and persist your work across sessions.
+        </p>
+        <p>
+          Screenshots below are auto-generated from your live deployment. To populate them, run these commands after deploying:
+        </p>
+        <p>
+          <code>CAPTURE_MANUAL=1 APP_BASE_URL=https://your-app.workers.dev npx playwright test tests/e2e/manual-capture.spec.ts</code>
+        </p>
+        <p>
+          <code>CAPTURE_ONBOARDING=1 APP_BASE_URL=https://your-app.workers.dev npx playwright test tests/e2e/onboarding-screenshots.spec.ts</code>
+        </p>
+        <p>
+          The onboarding screenshots (used by the "New Here?" modal on the home page) and manual screenshots (used on this page) are captured separately. Both require a live deployed URL with real Mapbox tiles.
+          After capturing, run <code>npm run build && wrangler deploy</code> to bundle the new images into the worker.
+        </p>
+        <div class="badge-row">
+          <span class="badge">Desktop browser validated</span>
+          <span class="badge">Mobile browser validated</span>
+          <span class="badge">Azure search validated</span>
+          <span class="badge">Mapbox rendering validated</span>
+          <span class="badge">D1 persistence confirmed</span>
+          <span class="badge">R2 upload path confirmed</span>
+        </div>
+      </section>
+
+      <section class="hero-grid">
+        <article class="panel">
+          <h2>What This Tool Is For</h2>
+          <p>
+            Start from an address, choose a radius, pull nearby points of interest, and build a reusable scouting board for drone planning.
+            Scouts can save locations, mark what is photographed, attach notes or media, and reopen the same territory later with the same context intact.
+          </p>
+          <div class="callout">
+            <p>
+              The product is intentionally radius-first. The key question is not just "what exists here?" but
+              "what exists within 1, 5, 10, 25, 50, or 100 miles of the area I care about?"
+            </p>
+          </div>
+        </article>
+        <article class="panel">
+          <h2>What Was Verified</h2>
+          <ul class="checklist">
+            <li>Created multiple scout profiles and switched between them.</li>
+            <li>Ran live Azure-backed POI searches on desktop and mobile.</li>
+            <li>Validated the live Mapbox map, clustering, and saved-pin rendering.</li>
+            <li>Saved POIs to the queue with different statuses and notes.</li>
+            <li>Uploaded field media and confirmed the stored asset streamed back from the Worker.</li>
+            <li>Confirmed EXIF metadata appears in the UI as capture time, image size, device label, and distance from the saved POI.</li>
+            <li>Clicked back from the gallery to the saved pin and to the capture coordinates.</li>
+            <li>Closed the browser and reopened fresh sessions to confirm persistence from production data.</li>
+            <li>Confirmed provider budget guardrails render in the live settings panel.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="section panel">
+        <h2>Core Workflow</h2>
+        <div class="step-grid">
+          <article class="step">
+            <div class="number">1</div>
+            <strong>Create or select a scout.</strong>
+            <p>Profiles are lightweight workspaces for each operator, consultant, or teammate.</p>
+          </article>
+          <article class="step">
+            <div class="number">2</div>
+            <strong>Search from an address.</strong>
+            <p>Pick a radius band, select categories, and run the nearby search.</p>
+          </article>
+          <article class="step">
+            <div class="number">3</div>
+            <strong>Review map and results.</strong>
+            <p>Use the clustered map, synchronized list, and coverage ladder to understand the area quickly.</p>
+          </article>
+          <article class="step">
+            <div class="number">4</div>
+            <strong>Queue, capture, and revisit.</strong>
+            <p>Save points, attach media, export coordinates, and reopen the same scout later.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Desktop Walkthrough</h2>
+        <div class="gallery two-up">
+          <figure class="figure-card">
+            <img src="/manual/desktop/01-desktop-home-mapbox.jpg" alt="Desktop home view showing the live Mapbox map and provider status settings panel." />
+            <figcaption class="figure-copy">
+              <strong>Live startup view</strong>
+              <p>
+                The app opens with the Mapbox mission board, scout controls, radius presets, categories, and provider budget guardrails visible immediately.
+              </p>
+            </figcaption>
+          </figure>
+          <figure class="figure-card">
+            <img src="/manual/desktop/05-desktop-settings-mapbox.jpg" alt="Provider guardrail settings panel showing Azure Maps Search and Mapbox map load usage." />
+            <figcaption class="figure-copy">
+              <strong>Provider guardrails</strong>
+              <p>
+                The settings panel shows Azure search usage, Mapbox map-load usage, and the warning / lock thresholds at 80%, 85%, and 90%.
+              </p>
+            </figcaption>
+          </figure>
+          <figure class="figure-card">
+            <img src="/manual/desktop/02-desktop-search-mapbox.jpg" alt="Desktop search showing clustered live POIs on the Mapbox satellite map." />
+            <figcaption class="figure-copy">
+              <strong>Clustered live search</strong>
+              <p>
+                This search uses Azure Maps Search for POI discovery and Mapbox for the satellite-streets mission board, cluster rendering, and radius overlay.
+              </p>
+            </figcaption>
+          </figure>
+          <figure class="figure-card">
+            <img src="/manual/desktop/03-desktop-queue-metadata-mapbox.jpg" alt="Desktop queue flow showing a queued POI with uploaded image metadata in the detail panel." />
+            <figcaption class="figure-copy">
+              <strong>Queue plus metadata-backed evidence</strong>
+              <p>
+                After queueing a POI, the uploaded proof image returns with extracted metadata so the scout can see when and where the capture happened.
+              </p>
+            </figcaption>
+          </figure>
+          <figure class="figure-card">
+            <img src="/manual/desktop/06-desktop-capture-focus-mapbox.jpg" alt="Desktop capture focus view with the map centered on the uploaded image coordinates." />
+            <figcaption class="figure-copy">
+              <strong>Show capture on the live map</strong>
+              <p>
+                Clicking <strong>Show capture</strong> jumps the live map to the uploaded coordinates and keeps the saved POI context intact.
+              </p>
+            </figcaption>
+          </figure>
+          <figure class="figure-card">
+            <img src="/manual/desktop/04-desktop-restored-gallery-mapbox.jpg" alt="Desktop restored session showing saved pin, gallery, and history after reopening the browser." />
+            <figcaption class="figure-copy">
+              <strong>Fresh-session restore</strong>
+              <p>
+                After reopening the browser, the scout profile, saved pin, queue state, gallery evidence, and saved search history all come back from production persistence.
+              </p>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Mobile Walkthrough</h2>
+        <div class="gallery two-up">
+          <figure class="figure-card">
+            <img src="/manual/mobile/01-mobile-home-mapbox.jpg" alt="Mobile home view showing the stacked controls and Mapbox mission board." />
+            <figcaption class="figure-copy">
+              <strong>Mobile startup</strong>
+              <p>
+                The mobile layout keeps the same workflow in a single-column field-ready format.
+              </p>
+            </figcaption>
+          </figure>
+          <figure class="figure-card">
+            <img src="/manual/mobile/02-mobile-search-mapbox.jpg" alt="Mobile live search results showing returned POIs and the map." />
+            <figcaption class="figure-copy">
+              <strong>Mobile live search</strong>
+              <p>
+                A fresh mobile scout can still run live nearby searches, review returned POIs, and work from the same radius-first flow.
+              </p>
+            </figcaption>
+          </figure>
+          <figure class="figure-card">
+            <img src="/manual/mobile/03-mobile-queued-mapbox.jpg" alt="Mobile queue state showing a saved POI and notes." />
+            <figcaption class="figure-copy">
+              <strong>Touch-friendly queue workflow</strong>
+              <p>
+                Queue status, interest notes, and save-to-queue all remain usable in the mobile viewport.
+              </p>
+            </figcaption>
+          </figure>
+          <figure class="figure-card">
+            <img src="/manual/mobile/04-mobile-restored-mapbox.jpg" alt="Mobile restored view showing the saved scout state after reopening the app." />
+            <figcaption class="figure-copy">
+              <strong>Mobile persistence</strong>
+              <p>
+                After a fresh reopen, the selected scout, saved queue, and history are restored from the live database.
+              </p>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section hero-grid">
+        <article class="panel">
+          <h2>Operational Notes</h2>
+          <ul class="checklist">
+            <li>Fresh sessions may show a short loading state before the Mapbox map and provider counters finish initializing.</li>
+            <li>The `50 mi` and `100 mi` radius bands remain beta intentionally.</li>
+            <li>`100 mi (beta)` is still best used one category at a time.</li>
+            <li>Very dense downtown searches are still faster to triage from the synchronized result list before saving queue pins.</li>
+            <li>Saved-scout reload now restores the live map to the scout's working area instead of falling back to the default center.</li>
+            <li>CSV and GeoJSON exports remain available whenever a scout profile is selected.</li>
+            <li>The queue is the durable work surface; replaying a saved search is how you reopen a prior planning pass.</li>
+          </ul>
+        </article>
+        <article class="panel">
+          <h2>Recommended Use Pattern</h2>
+          <ul class="checklist">
+            <li>Create one scout profile per operator, consultant, or campaign.</li>
+            <li>Use smaller radii first to understand local density before moving to wider bands.</li>
+            <li>Queue only the locations worth follow-up so exports stay high-signal.</li>
+            <li>Attach media or notes as soon as field knowledge is gathered, not later from memory.</li>
+            <li>Watch the provider guardrails during live exploration so you can preserve budget for real fieldwork.</li>
+          </ul>
+        </article>
+      </section>
+
+      <nav class="footer-nav">
+        <a href="/">Return to Radius Scout</a>
+        <a href="/">Open Radius Scout</a>
+      </nav>
+    </main>
+    <script>
+      document.querySelectorAll('.figure-card img').forEach(img => {
+        img.addEventListener('error', () => {
+          img.classList.add('broken')
+          const placeholder = document.createElement('div')
+          placeholder.className = 'img-placeholder'
+          placeholder.textContent = 'Screenshot not yet captured — run the setup script to populate.'
+          img.parentNode.insertBefore(placeholder, img)
+        })
+      })
+    </script>
+  </body>
+</html>

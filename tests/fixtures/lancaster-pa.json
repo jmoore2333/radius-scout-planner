@@ -1,0 +1,79 @@
+{
+  "label": "100 N Queen St, Lancaster, PA 17603, USA",
+  "center": { "lat": 40.04016, "lng": -76.30586 },
+  "matches": ["100 n queen st", "lancaster"],
+  "points": [
+    {
+      "key": "lgh",
+      "name": "Lancaster General Hospital",
+      "category": "hospitals",
+      "rawCategories": ["hospitals"],
+      "address": "555 N Duke St, Lancaster, PA 17602",
+      "lat": 40.0397,
+      "lng": -76.3064,
+      "website": null,
+      "phone": null,
+      "sourceTags": { "mock": "true", "category": "hospitals" }
+    },
+    {
+      "key": "park-city",
+      "name": "Park City Center",
+      "category": "malls",
+      "rawCategories": ["malls"],
+      "address": "142 Park City Center, Lancaster, PA 17601",
+      "lat": 40.0656,
+      "lng": -76.3172,
+      "website": null,
+      "phone": null,
+      "sourceTags": { "mock": "true", "category": "malls" }
+    },
+    {
+      "key": "school-district",
+      "name": "School District of Lancaster",
+      "category": "schools",
+      "rawCategories": ["schools"],
+      "address": "251 S Prince St, Lancaster, PA 17603",
+      "lat": 40.0404,
+      "lng": -76.3016,
+      "website": null,
+      "phone": null,
+      "sourceTags": { "mock": "true", "category": "schools" }
+    },
+    {
+      "key": "shot-coffee",
+      "name": "Shot and Bottle",
+      "category": "coffee_shops",
+      "rawCategories": ["coffee_shops"],
+      "address": "2 N Queen St, Lancaster, PA 17603",
+      "lat": 40.0389,
+      "lng": -76.306,
+      "website": null,
+      "phone": null,
+      "sourceTags": { "mock": "true", "category": "coffee_shops" }
+    },
+    {
+      "key": "zoetropolis",
+      "name": "Zoetropolis Cinema Stillhouse",
+      "category": "movie_theaters",
+      "rawCategories": ["movie_theaters"],
+      "address": "112 N Water St, Lancaster, PA 17603",
+      "lat": 40.0403,
+      "lng": -76.2998,
+      "website": null,
+      "phone": null,
+      "sourceTags": { "mock": "true", "category": "movie_theaters" }
+    },
+    {
+      "key": "cork-factory",
+      "name": "Cork & Cap Restaurant",
+      "category": "restaurants",
+      "rawCategories": ["restaurants"],
+      "address": "480 New Holland Ave, Lancaster, PA 17602",
+      "lat": 40.0467,
+      "lng": -76.2981,
+      "website": null,
+      "phone": null,
+      "sourceTags": { "mock": "true", "category": "restaurants" }
+    }
+  ]
+}
